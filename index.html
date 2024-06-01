@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        flex-direction: column;
+      }
+
+      #game{
+        border: 1px solid green;
+      }
+
+      #point{
+        color: white;
+        font-family: sans-serif;
+        font-size: 24px;
+      }
+
+      .container{
+        padding: 20px 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+      }
+
+      .container-top{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .container-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .button{
+        width: 80px;
+        height: 45px;
+        font-size: 24px;
+        border: 1px solid green;
+        background-color: green;
+        color: white;
+        border-radius: 8px;
+      }
+
+      .button:active{
+        opacity: .8;
+      }
+
+      .button-center{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="container-top">
+        <p id="point">Point: 0</p>
+    <canvas id="game"></canvas>
+      </div>
+
+      <div class="container-bottom">
+        <div class="button-top"> <button class="button">UP</button> </div>
+        <div class="button-center"> <button class="button">Left</button> <button class="button">Right</button> </div>
+        <div class="button-down"> <button class="button">Down</button> </div>
+      </div>
+    </div>
+
+    <script src="/src/class/Grid.ts"></script>
+    <script src="/src/class/Snake.ts"></script>
+    <script src="/src/class/Food.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
